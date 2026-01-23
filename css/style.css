@@ -2,10 +2,10 @@
    1. Variablen & Grundgerüst
 ============================ */
 :root {
-  --primary-color: #007bff;
-  --primary-hover: #0056b3;
-  --success-color: #28a745;
-  --success-hover: #1e7e34;
+  --primary-color: hsl(250, 60%, 60%);
+  --primary-hover: hsl(250, 60%, 35%);
+  --success-color: hsl(75, 60%, 60%);
+  --success-hover: hsl(75, 60%, 45%);
   --danger-color: #dc3545;
   --danger-hover: #a71d2a;
   --bg-light: #f5f5f5;

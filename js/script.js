@@ -1,8 +1,77 @@
 /* -------------------- Produktdaten -------------------- */
 const products = [
-  { id: 1, name: "T-Shirt", price: 19.99, img: "images/tshirt.jpg" },
-  { id: 2, name: "Hoodie", price: 39.99, img: "images/hoodie.jpg" },
-  { id: 3, name: "Cap", price: 14.99, img: "images/cap.jpg" }
+  { id: 1, 
+    name: "T-Shirt", 
+    price: 19.99, 
+    img: "images/tshirt.jpg", 
+    disicrption: "Ein bequemes T-Shirt aus 100% Baumwolle." },
+
+  { id: 2, 
+    name: "Hoodie", 
+    price: 39.99, 
+    img: "images/hoodie.jpg",
+    disicrption: "Ein warmer Hoodie für kalte Tage." },
+
+  { id: 3, 
+    name: "Cap", 
+    price: 14.99, 
+    img: "images/cap.jpg",
+    disicrption: "Eine stylische Cap für sonnige Tage." },
+
+  { id: 4, 
+    name: "Bag", 
+    price: 6.99, 
+    img: "images/bag.png",
+    disicrption: "Eine praktische Tasche für den Alltag." }, 
+
+  { id: 5, 
+    name: "Keychain", 
+    price: 3.99, 
+    img: "images/keychain.png",
+    disicrption: "Ein cooler Schlüsselanhänger." }, 
+
+  { id: 6, 
+    name: "DrinkBottle", 
+    price: 16.99, 
+    img: "images/drinkbottle.png",
+    disicrption: "Eine wiederverwendbare Trinkflasche." }, 
+
+  { id: 7, 
+    name: "socks", 
+    price: 9.99, 
+    img: "images/socks.png",
+    disicrption: "Bequeme und stylische Socken." }, 
+
+  { id: 8, 
+    name: "usb", 
+    price: 4.99, 
+    img: "images/usb.png",
+    disicrption: "Ein praktischer USB-Stick." }, 
+
+  { id: 9, 
+    name: "cup", 
+    price: 6.99, 
+    img: "images/cup.png",
+    disicrption: "Eine Tasse für deinen Lieblingskaffee." }, 
+
+  { id: 10, 
+    name: "highlighter", 
+    price: 1.99, 
+    img: "images/highlighter.png",
+    disicrption: "Ein bunter Textmarker für wichtige Notizen." }, 
+  
+  { id: 11, 
+    name: "notepad", 
+    price: 2.99, 
+    img: "images/notepad.png",
+    disicrption: "Ein praktisches Notizbuch für deine Gedanken." },
+
+  { id: 12, 
+    name: "notebook", 
+    price: 4.99, 
+    img: "images/notebook.png",
+    disicrption: "Ein stylisches Notizheft für Schule und Arbeit." }
+
 ];
 
 /* -------------------- Produkte rendern -------------------- */
@@ -20,7 +89,7 @@ function renderProducts(list = products) {
       <img src="${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p class="price">${product.price.toFixed(2)} €</p>
-      <p class="desc">Kurze Produktbeschreibung hier.</p>
+      <p class="desc">${product.disicrption}</p>
       <button onclick="addToCart(${product.id})">In den Warenkorb</button>
     `;
 
