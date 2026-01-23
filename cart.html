@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Warenkorb - MyShop</title>
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mini Shop Projekt</h1>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="products.html">Produkte</a>
+    <a href="cart.html">Warenkorb</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Dein Warenkorb</h2>
+  
+  <div id="cart-list"></div>
+  
+  <div class="cart-summary">
+    <p id="total"></p>
+    <button id="checkout-btn" class="button" onclick="alert('Vielen Dank für deine Bestellung!')">Jetzt zur Kasse</button>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mini Shop Projekt</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
