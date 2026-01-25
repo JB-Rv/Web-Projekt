@@ -1,0 +1,87 @@
+/* ============================
+   4. Produktseite & Suche
+============================ */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+#product-title {
+  text-align: center;
+}
+
+.controls input {
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--bg-darkgrey);
+  border: 2px solid var(--success-color);
+  border-radius: 48px;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Produkt-Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--bg-darkgrey);
+  border: 1px solid var(--border-lightgrey);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary-color);
+}
+
+.product-card h3,
+.product-card .price,
+.product-card p {
+  margin: 0 0 0.8rem 0;
+  line-height: 1.2;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Quadratische Bilder */
+  object-fit: cover;
+  border-radius: 96px;
+  margin-bottom: 1rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.product-card button {
+  background-color: var(--success-color);
+  color: var(--bg-darkgrey);
+  border: none;
+  padding: 1.6rem;
+  border-radius: 48px;
+  font-weight: bold;
+  margin-top: auto; /* Schiebt Button immer nach unten */
+}
+
+.product-card button:hover {
+  background-color: var(--success-hover);
+}
