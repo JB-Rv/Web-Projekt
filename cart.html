@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -12,10 +13,11 @@
 
 <header>
   <h1>Mini Shop Projekt</h1>
-  <nav>
+  <nav id="nav">
     <a href="index.html">Start</a>
     <a href="products.html">Produkte</a>
     <a href="cart.html">Warenkorb</a>
+    <p id="number_of_items"></p>
   </nav>
 </header>
 
@@ -26,7 +28,7 @@
   
   <div class="cart-summary">
     <p id="total"></p>
-    <button id="checkout-btn" class="button" onclick="alert('Vielen Dank für deine Bestellung!')">Jetzt zur Kasse</button>
+    <button id="checkout-btn" class="button" onclick="checkout()">Jetzt zur Kasse</button>
   </div>
 </main>
 
@@ -35,7 +37,8 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="js/script.js"></script>
+<script src="js/cart_script.js"></script>
+<script src="js/global_script.js"></script>
 
 </body>
 </html>

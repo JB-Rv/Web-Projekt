@@ -12,10 +12,11 @@
 
 <header>
   <h1>Mini Shop Projekt</h1>
-  <nav>
+  <nav id="nav">
     <a href="index.html">Start</a>
     <a href="products.html">Produkte</a>
     <a href="cart.html">Warenkorb</a>
+    <p id="number_of_items"></p>
   </nav>
 </header>
 
@@ -25,8 +26,13 @@
   <div class="controls">
     <input type="text" id="search-input" placeholder="Produkt suchen..." oninput="searchProducts()">
     
-    <button onclick="resetSearch()">Alle anzeigen</button>
-    <button onclick="sortPriceHighToLow()">Preis: Hoch → Niedrig</button>
+    <select name="filter" id="filter">
+      <option value="0">Topseller</option>
+      <option value="1">Preis: Hoch → Niedrig</option>
+      <option value="2">Preis: Niedrig → Hoch</option>
+      <option value="3">Name: A → Z</option>
+      <option value="4">Name: Z → A</option>
+    </select>
   </div>
 
   <div id="product-list" class="product-grid"></div>
@@ -37,7 +43,8 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="js/script.js"></script>
+<script src="js/products_script.js"></script>
+<script src="js/global_script.js"></script>
 
 </body>
 </html>
