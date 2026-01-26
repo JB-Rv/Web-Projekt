@@ -85,7 +85,7 @@ function removeFromCart(index) {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    style: { background: "#dc3545" }
+    style: { background: "hsl(300, 75%, 60%)" }
   }).showToast();
 
   
@@ -109,7 +109,7 @@ function checkout(){
     gravity: "bottom",
     position: "right",
     destination: "products.html",
-    style: { background: "#dc3545" }
+    style: { background: "hsl(300, 75%, 60%)" }
   }).showToast();
 
 
@@ -124,7 +124,7 @@ function checkout(){
     duration: 4000,
     gravity: "top",
     position: "right",
-    style: { background: "#dc3545" }
+    style: { background: "hsl(300, 75%, 60%)" }
   }).showToast();
 
     localStorage.setItem("cart", JSON.stringify(""));
