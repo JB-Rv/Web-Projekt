@@ -164,7 +164,7 @@ function removeFromCart(index) {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    style: { background: "hsl(310, 85%, 55%)" }
+    style: { background: "hsl(300, 75%, 60%)" }
   }).showToast();
 }
 

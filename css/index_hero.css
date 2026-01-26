@@ -45,6 +45,7 @@ main {
   border-radius: 48px;
   border: 2px solid var(--success-hover);
   font-size: 1rem;
+  font-weight: bold;
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -52,5 +53,5 @@ main {
   background: var(--success-hover);
   transform: translateY(-2px);
   color: var(--bg-dark);
-  font-weight: bold;
+  font-weight:bolder;
 }
