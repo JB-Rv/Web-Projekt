@@ -3,15 +3,18 @@
 
 function renderCart() {
   const cartList = document.getElementById("cart-list");
+  const empty_cart = document.getElementById("empty_cart");
   const totalText = document.getElementById("total");
   if (!cartList) return;
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cart.length === 0) {
-    cartList.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
+    cartList.innerHTML = "";
+    empty_cart.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
     if (totalText) totalText.textContent = "Gesamt: 0.00 €";
   } else {
+    empty_cart.innerHTML = "";
     cartList.innerHTML = "";
     let total = 0;
 
