@@ -35,3 +35,20 @@ nav a:hover {
 #nav-logo {
   height: 24px;
 }
+.cart-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#number_of_items {
+  position: absolute;
+  top: -8px;
+  right: -30px;
+
+   font-weight: bold;
+
+  color: var(white);
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
