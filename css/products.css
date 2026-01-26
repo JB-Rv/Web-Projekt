@@ -150,12 +150,14 @@
   font-weight: bolder;
 }
 
-select {
-
-
+.controls select {
   background-color: var(--bg-darkgrey);
   color: var(--input-color);
-  height: 5rem;
+  border: 2px solid var(--bg-darkgrey);
+  padding: 1.2rem 1.6rem;      /* gleiche “Höhe” wie Input */
+  border-radius: 48px;
+  height: 4rem;
   font-size: 1.5rem;
-
+  margin-top: 0.2rem;
+  appearance: none; 
 }
