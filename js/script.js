@@ -110,7 +110,7 @@ function addToCart(id) {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    style: { background: "#007bff" }
+    style: { background: "hsl(250, 84%, 75%)" }
   }).showToast();
 }
 
@@ -164,7 +164,7 @@ function removeFromCart(index) {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    style: { background: "#dc3545" }
+    style: { background: "hsl(310, 85%, 55%)" }
   }).showToast();
 }
 

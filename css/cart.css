@@ -1,6 +1,12 @@
 /* ============================
    5. Warenkorb Styling
 ============================ */
+#cart-title{
+  text-align: center;
+  font-family: var(--font-hero); 
+  font-weight: lighter;
+}
+
 #cart-list {
   display: flex;
   flex-direction: column;
@@ -10,31 +16,40 @@
 .cart-item {
   display: flex;
   align-items: center;
-  background: var(--white);
-  padding: 1rem;
+  background: var(--bg-darkgrey);
+  border: 1px solid var(--border-lightgrey);
+  padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 1.6rem;
+}
+
+.cart-item:hover{
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary-color);
 }
 
 .cart-item img {
-  width: 80px;
-  height: 80px;
+  width: 124px;
+  height: 124px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 96px;
   margin-right: 1.5rem;
 }
 
 .cart-item-info {
   flex: 1;
+  margin: auto;
+  line-height: 0.6;
 }
 
 .cart-item button {
   background-color: var(--danger-color);
   color: var(--white);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 1em 1.6rem;
+  border-radius: 48px;
+  font-size: 1rem;
 }
 
 .cart-item button:hover {
@@ -43,14 +58,27 @@
 
 .cart-summary {
   margin-top: 2rem;
-  text-align: right;
+  text-align: center;
   padding: 1.5rem;
-  background: var(--white);
-  border-radius: var(--border-radius);
 }
 
 #total {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+#checkout-btn {
+    background: var(--success-color);
+    color: var(--bg-darkgrey);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid var(--success-color);
+}
+
+#checkout-btn:hover {
+    background: var(--success-hover);
+    border: 4px solid hsla(75, 85%, 55%, 0.1);
+    box-shadow:  hsla(75, 85%, 55%, 0.1) 0 0 8px 4px;
 }

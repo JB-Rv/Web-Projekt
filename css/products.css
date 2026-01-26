@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
-
   padding: 1rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
@@ -14,6 +13,8 @@
 
 #product-title {
   text-align: center;
+  font-family: var(--font-hero); 
+  font-weight: lighter;
 }
 
 .controls input {
@@ -21,10 +22,22 @@
   flex: 1;
   min-width: 200px;
   background-color: var(--bg-darkgrey);
-  border: 2px solid var(--success-color);
+  border: 1px solid var(--border-lightgrey);
   border-radius: 48px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: var(--primary-color);
+}
+
+.controls input::placeholder {
+  color: hsl(250, 5%, 60%);
+  font-weight:normal ;
+}
+
+.controls input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+  background-color: hsl(250, 5%, 22%);
 }
 
 /* Produkt-Grid */
@@ -54,7 +67,7 @@
 .product-card h3,
 .product-card .price,
 .product-card p {
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 0.8rem 0; 
   line-height: 1.2;
 }
 
@@ -80,6 +93,7 @@
   border-radius: 48px;
   font-weight: bold;
   margin-top: auto; /* Schiebt Button immer nach unten */
+  margin-bottom: 1rem;
 }
 
 .product-card button:hover {
