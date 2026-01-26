@@ -1,0 +1,57 @@
+/* ============================
+   2. Haupt-Layout & Hero
+============================ */
+
+main {
+  max-width: 1200px; /* Begrenzt die Breite auf großen Bildschirmen */
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  margin-top: -3rem;
+}
+
+.hero {
+  text-align: center;
+  color: var(--white);
+  padding: 3rem 2rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  
+}
+
+.hero h2 {
+  font-family: var(--font-hero); 
+  font-weight: lighter;
+}
+.hero h4 {
+  font-family: var(--font-hero); 
+  font-weight: lighter;
+  margin-top: -6rem;
+}
+
+.hero p {
+  font-size: 2rem;
+  font-family: var(--font-hero);
+  font-weight: lighter;
+  margin-top: -3rem;
+}
+
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 2.4rem;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 48px;
+  border: 2px solid var(--success-hover);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: var(--success-hover);
+  transform: translateY(-2px);
+  color: var(--bg-dark);
+  font-weight:bolder;
+}

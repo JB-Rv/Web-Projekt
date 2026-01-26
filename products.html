@@ -11,20 +11,21 @@
 <body>
 
 <header>
-  <h1>Mini Shop Projekt</h1>
-  <nav id="nav">
-    <a href="index.html">Start</a>
+  <nav>
+    <a href="index.html" > 
+      <img id="nav-logo" src = "images/start.png"> 
+    </a>
     <a href="products.html">Produkte</a>
     <a href="cart.html">Warenkorb</a>
     <p id="number_of_items"></p>
   </nav>
+  <script src="js/header.js"></script>
 </header>
 
 <main>
-  <h2>Unsere Produkte</h2>
+  <h2 id="product-title">Unsere Produkte</h2>
 
   <div class="controls">
-    <input type="text" id="search-input" placeholder="Produkt suchen..." oninput="searchProducts()">
     
     <select name="filter" id="filter">
       <option value="0">Topseller</option>

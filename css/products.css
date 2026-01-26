@@ -1,0 +1,151 @@
+/* ============================
+   4. Produktseite & Suche
+============================ */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  flex: 1;
+}
+
+/* Such-Icon links */
+.controls::before {
+  content: '';
+  position: absolute;
+  left: 2.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background: url('../images/icon_search.png');
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5; /*alpha*/
+  pointer-events: none;
+}
+
+#product-title {
+  text-align: center;
+  font-family: var(--font-hero); 
+  font-weight: lighter;
+}
+
+.controls input {
+  padding: 1.5rem;
+  padding-left: 3.6rem;
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--bg-darkgrey);
+  border: 1px solid var(--border-lightgrey);
+  border-radius: 48px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.controls input::placeholder {
+  color: var(--input-color);
+  font-weight:normal ;
+}
+
+.controls input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+  background-color: hsl(250, 5%, 22%);
+}
+
+/* Clear-Icon rechts */
+.clear-icon {
+  position: absolute;
+  right: 17.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('../images/icon_clean.png') no-repeat center;
+  background-size: contain;
+  cursor: url('../images/curcor_pointer.png') 32 32, pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+/* Sichtbar bei Fokus ODER Text */
+.controls input:focus + .clear-icon,
+.controls input:not(:placeholder-shown) + .clear-icon {
+  opacity: 0.7;
+  pointer-events: auto;
+}
+
+.clear-icon:hover {
+  opacity: 0.9;
+}
+
+/* Produkt-Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--bg-darkgrey);
+  border: 1px solid var(--border-lightgrey);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: rotate(5deg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--primary-color);
+}
+
+.product-card h3,
+.product-card .price,
+.product-card p {
+  margin: 0 0 0.8rem 0; 
+  line-height: 1.2;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Quadratische Bilder */
+  object-fit: cover;
+  border-radius: 96px;
+  margin-bottom: 1rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.product-card button {
+  background-color: var(--bg-darkgrey);
+  border: 2px solid var(--success-hover);
+  color: var(--success-hover);
+  padding: 1.4rem;
+  border-radius: 48px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: auto; /* Schiebt Button immer nach unten */
+  margin-bottom: 1rem;
+}
+
+.product-card button:hover {
+  background-color: var(--success-hover);
+  border: 2px solid var(--success-hover);
+  color: var(--bg-darkgrey);
+  font-weight: bolder;
+}

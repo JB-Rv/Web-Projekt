@@ -1,0 +1,45 @@
+/* ============================
+   3. Info-Grid (Startseite)
+============================ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: var(--bg-darkgrey);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-lightgrey);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transform-origin: center; /*Routierungspunkt in eigene Mitte*/
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover h3,
+.info-card:hover p {
+  color: var(--success-hover);
+}
+
+.info-card:hover {
+  transform: rotate(5deg);
+  color: var(--success-color);
+  border: 2px solid var(--success-color);
+}
+
+.info-card h3 {
+  font-family: var(--font-hero);
+  font-weight: lighter;
+  color: var(--white);
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+
+.info-card p {
+  color: var(--second-white);
+  margin-top: -1rem;
+}
